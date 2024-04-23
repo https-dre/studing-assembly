@@ -1,0 +1,7 @@
+#!/bin/bash
+set -x
+
+nasm -f elf64 print.asm -o build/print.o
+ld -m elf_x86_64 build/print.o -o build/print
+
+./build/print
