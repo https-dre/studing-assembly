@@ -1,0 +1,7 @@
+#!/bin/bash
+set -x
+
+nasm -f elf32 program.asm -o build/program.o
+ld -m elf_i386 build/program.o -o build/program
+
+./build/program
